@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    border: 0;
+    outline:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --color-bg:#1B262C;
+    --color-bh:hsl(201, 24%, 14%);
+    --color-head:#0F4C75;
+    --color-hh:	hsl(204, 77%, 26%);
+    --color-normal:#3282B8;
+    --color-nh:hsl(204, 57%, 46%);
+    --color-light:#BBE1FA;
+    --color-lh:	hsl(204, 86%, 86%);
+    --color-white:#fff;
+
+    --container-width-lg:75%;
+    --container-width-md:86%;
+    --container-width-sm:90%;
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background: var(--color-bg);
+    color:var(--color-white);
+    /* background-image: url(../src/assets/—Pngtree—blue\ triangle\ border_5505176.png); */
+    background-repeat: repeat-x;
+    background-size: 80px;
+
+
 }
