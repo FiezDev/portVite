@@ -1,6 +1,10 @@
 import React from 'react'
-import Header from './components/header/Header'
 
+import { initializeApp } from 'firebase/app';
+import { } from 'firebase/database';
+import { } from 'firebase/analytics';
+
+import Header from './components/header/Header'
 import Contact from './components/contact/Contact'
 import Experience from './components/experience/Experience'
 import Footer from './components/footer/Footer'

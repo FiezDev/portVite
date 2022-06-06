@@ -13,7 +13,16 @@ const Header = () => {
             src="https://dummyimage.com/720x600"
           />
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div>
+        <ul className="">
+          <li className="">Menu1</li>
+          <li className="">Menu1</li>
+          <li className="">Menu1</li>
+          <li className="">Menu1</li>
+          <li className="">Menu1</li>
+          </ul>
+        </div>
+        {/* <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Before they sold out
             <br className="hidden lg:inline-block" />
@@ -26,7 +35,7 @@ const Header = () => {
             hexagon try-hard chambray.
           </p>
           <div className="flex justify-center">
-            {/* <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"> */}
+
             <button className="btn-primary">
               Button
             </button>
@@ -34,7 +43,7 @@ const Header = () => {
               Button
             </button>
           </div>
-        </div>
+        </div> */}
  
       </div>
     </section>

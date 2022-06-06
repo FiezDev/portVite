@@ -9,23 +9,6 @@
     list-style: none;
     text-decoration: none;
 }
-:root{
-    --color-bg:#1B262C;
-    --color-bh:hsl(201, 24%, 14%);
-    --color-head:#0F4C75;
-    --color-hh:	hsl(204, 77%, 26%);
-    --color-normal:#3282B8;
-    --color-nh:hsl(204, 57%, 46%);
-    --color-light:#BBE1FA;
-    --color-lh:	hsl(204, 86%, 86%);
-    --color-white:#fff;
-
-    --container-width-lg:75%;
-    --container-width-md:86%;
-    --container-width-sm:90%;
-
-
-}
 
 html {
     scroll-behavior: smooth;
@@ -37,9 +20,8 @@ html {
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    background: var(--color-bg);
+    background: #1B262C;
     color:var(--color-white);
-    /* background-image: url(../src/assets/—Pngtree—blue\ triangle\ border_5505176.png); */
     background-repeat: repeat-x;
     background-size: 80px;
 
