@@ -1,26 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import "./nav.css";
 
 const Nav = () => {
   return (
-    <header className="text-white bg-bg body-font sticky top-0 z-50">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <nav className="md:ml-auto md:mr-auto relative skew-y-15 flex flex-wrap items-center text-base justify-between">
-          <button className="btn-skew btn-before-skew">
-            <a href="..">About Me</a>
-          </button>
-          <button className="btn-skew btn-before-skew">
-            <a href="..">Experience</a>
-          </button>
-          <button className="btn-skew">
-            <a href="..">My Work</a>
-          </button>
-          <button className="btn-skew">
-            <a href="..">Contact</a>
-          </button>
-        </nav>
-      </div>
-    </header>
+    <div className="fixed top-2/4 -translate-y-[calc(50%+3vh)]">
+      <ul className="skew-y-[-15deg]">
+        <li className="z-50 btn3d-li">
+          <a className="btn3d-a glass" href="#">
+            About
+          </a>
+        </li>
+        <li className="z-40 btn3d-li">
+          <a className="btn3d-a glass" href="#">
+            Skill
+          </a>
+        </li>
+        <li className="z-30 btn3d-li">
+          <a className="btn3d-a glass" href="#">
+            Work
+          </a>
+        </li>
+        <li className="z-20 btn3d-li">
+          <a className="btn3d-a glass" href="#">
+            Contact
+          </a>
+        </li>
+        <li className="z-10 btn3d-li">
+          <a className="btn3d-a glass" href="#">
+            Social
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
 
