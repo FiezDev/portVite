@@ -3,7 +3,7 @@ import './contact.css'
 
 const Contact = () => {
   return (
-  <section className="text-gray-400 bg-gray-900 body-font relative">
+  <section id="contact" className="text-gray-400 bg-gray-900 body-font relative  lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
   <div className="absolute inset-0 bg-gray-900">
     {/* <iframe title="map" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.16);"></iframe> */}
   </div>

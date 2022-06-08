@@ -3,7 +3,7 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <footer className="text-gray-400 bg-gray-900 body-font">
+    <footer id="social" className="text-gray-400 bg-gray-900 body-font lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a className="flex title-font font-medium items-center md:justify-start justify-center text-white" href="..">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">

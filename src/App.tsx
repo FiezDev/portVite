@@ -4,24 +4,21 @@ import { initializeApp } from 'firebase/app';
 import { } from 'firebase/database';
 import { } from 'firebase/analytics';
 
-import Header from './components/header/Header'
+import Skills from './components/skills/Skills'
 import Contact from './components/contact/Contact'
-import Experience from './components/experience/Experience'
+
 import Footer from './components/footer/Footer'
 import Nav from './components/nav/Nav'
 import Portfolio from './components/portfolio/Portfolio'
-// import About from './components/about/About'
-// import Services from './components/services/Services'
-// import Testtimonials from './components/testimonials/Testimonials'
+import About from './components/about/About'
 
 const App = () => {
   return (
     <>
    
     <Nav/>
-    <Header/>
-    {/* <About/> */}
-    <Experience/>
+    <About/>
+    <Skills/>
     {/* <Services/> */}
     <Portfolio/>
     {/* <Testtimonials/> */}

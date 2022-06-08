@@ -3,7 +3,7 @@ import './portfolio.css'
 
 const Portfolio = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
+    <section id="work" className="text-gray-400 bg-gray-900 body-font lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-wrap -m-4">
         <div className="p-4 md:w-1/3">

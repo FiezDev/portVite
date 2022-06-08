@@ -21,9 +21,10 @@ html {
 body {
     font-family: 'Titillium Web', sans-serif;
     background: #1B262C;
-    color:var(--color-white);
+    color:white;
+    background-image: url(../src/assets/2.svg);
     background-repeat: repeat-x;
-    background-size: 80px;
+    background-size: 5px;
 
 
 }
