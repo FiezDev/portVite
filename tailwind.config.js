@@ -23,9 +23,6 @@ module.exports = {
       'white': '#fff'
     },
     extend: {
-      skew: {
-        '45': '45deg',
-      }
     },
   },
   plugins: [],

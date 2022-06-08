@@ -3,19 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-    .btn-primary {
-      @apply inline-flex text-white bg-bg border-0 py-2 px-6 focus:outline-none hover:bg-head  text-lg mb-5;
-    }
-    .btn-skew {
-      @apply inline-flex text-white bg-bg border-0 py-2 px-6 focus:outline-none hover:bg-head  text-lg relative skew-y-12 mb-5;
-    }
-    .btn-before-skew {
-      @apply before:absolute before:origin-right before:skew-y-45 top-0 -left-40 w-40 h-full bg-bg;
-    }
-    .skew-but-cus{
-      @apply  w-200 p-15;
-    }
-    .li-cus{
-      @apply ;
-    }
+  .btn-primary {
+    @apply inline-flex text-white bg-bg border-0 py-2 px-6 focus:outline-none hover:bg-head  text-lg mb-5;
   }
+
+
+  .btn3d-li {
+    @apply relative w-[120px] p-[15px] bg-[#3e3f46] duration-500
+    hover:bg-head hover:-translate-x-[-40px] 
+    before:absolute before:top-0 before:left-[-40px] before:w-[40px] before:h-full before:bg-[#3e3f46] before:brightness-75 before:origin-right before:skew-y-[45deg] before:duration-500
+    after:absolute after:top-[-40px] after:left-0 after:w-full after:h-[40px] after:bg-[#3e3f46] after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
+    before:hover:bg-head before:hover:brightness-75
+    after:hover:bg-head after:hover:brightness-90
+    /* last:after:shadow-[-120px_120px_20px_rgba(0,0,0,0.4)] */
+ 
+    ;
+  }
+  .btn3d-a {
+    @apply hover:text-white text-[#999] block uppercase tracking-wider	duration-500
+
+    
+  }
+  .btn3d-span {
+    @apply absolute top-0 left-[-40px] w-[40px] text-center h-full origin-right skew-y-[45deg] duration-500 flex justify-center items-center text-xl opacity-50 hover:opacity-100
+    ;
+  }
+}

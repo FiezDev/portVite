@@ -1,27 +1,67 @@
 import React from "react";
+import { useState } from "react";
 import "./nav.css";
 
-const Nav = () => {
+
+  const Nav = () => {
+    const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <header className="text-white bg-bg body-font sticky top-0 z-50">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <nav className="md:ml-auto md:mr-auto relative skew-y-15 flex flex-wrap items-center text-base justify-between">
-          <button className="btn-skew btn-before-skew">
-            <a href="..">About Me</a>
-          </button>
-          <button className="btn-skew btn-before-skew">
-            <a href="..">Experience</a>
-          </button>
-          <button className="btn-skew">
-            <a href="..">My Work</a>
-          </button>
-          <button className="btn-skew">
-            <a href="..">Contact</a>
-          </button>
-        </nav>
-      </div>
-    </header>
+    <div className='absolute left-0 top-0'> 
+          <ul className="skew-y-[-15deg]">
+
+            <li className="z-50 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-facebook-f"></i>
+                </span>
+                Facebook
+              </a>
+            </li>
+            <li className="z-40 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-whatsapp"></i>
+                </span>
+                Whatsapp
+              </a>
+            </li>
+            <li className="z-30 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-twitter"></i>
+                </span>
+                Twitter
+              </a>
+            </li>
+            <li className="z-20 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-instagram"></i>
+                </span>
+                Instagram
+              </a>
+            </li>
+            <li className="z-10 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-youtube"></i>
+                </span>
+                Youtube
+              </a>
+            </li>
+            <li className="z-0 btn3d-li">
+              <a className="btn3d-a" href="#">
+                <span className="btn3d-span">
+                  <i className="fa-brands fa-linkedin"></i>
+                </span>
+                Linkedin
+              </a>
+            </li>
+          </ul>
+    </div>
   );
-};
+}
+
 
 export default Nav;
