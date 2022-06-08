@@ -15,7 +15,6 @@
     after:absolute after:top-[-40px] after:left-0 after:w-full after:h-[40px] after:bg-head after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
     before:hover:bg-normal before:hover:brightness-75
     after:hover:bg-normal after:hover:brightness-90
-    /* last:after:shadow-[-120px_120px_20px_rgba(0,0,0,0.4)] */
     ;
   }
   .btn3d-a {
