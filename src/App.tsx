@@ -1,31 +1,35 @@
-import React from 'react'
+import React from "react";
 
-import { initializeApp } from 'firebase/app';
-import { } from 'firebase/database';
-import { } from 'firebase/analytics';
+import { initializeApp } from "firebase/app";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {} from "firebase/database";
+import {} from "firebase/analytics";
 
-import Skills from './components/skills/Skills'
-import Contact from './components/contact/Contact'
+import Footer from "./components/footer/Footer";
+import Nav from "./components/nav/Nav";
 
-import Footer from './components/footer/Footer'
-import Nav from './components/nav/Nav'
-import Portfolio from './components/portfolio/Portfolio'
-import About from './components/about/About'
+import Skills from "./pages/skills/Skills";
+import Contact from "./pages/contact/Contact";
+import Portfolio from "./pages/portfolio/Portfolio";
+import About from "./pages/about/About";
+import Home from "./pages/home/Home";
+import Error from "./pages/error/Error";
 
 const App = () => {
   return (
-    <>
-   
-    <Nav/>
-    <About/>
-    <Skills/>
-    {/* <Services/> */}
-    <Portfolio/>
-    {/* <Testtimonials/> */}
-    <Contact/>
-    <Footer/>
-    </>
-  )
-}
+    <Router>
+      <Nav />
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/works" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
 
-export default App
+export default App;

@@ -1,12 +1,12 @@
-import React from 'react'
-import './about.css'
+import React from "react";
+import "./Skills.css";
+import "../../style.css";
 
-const About = () => {
+const Skills = () => {
   return (
-   
-    <section id="about" className="text-gray-400 bg-gray-900 body-font lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
+    <div className="text-gray-400 bg-gray-900 body-font lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
       <div className="lg:container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-      <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
           <img
             className="object-cover object-center rounded"
             alt="hero"
@@ -20,26 +20,20 @@ const About = () => {
             <br className="hidden lg:inline-block" />
             readymade gluten
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="text-white mb-8 leading-relaxed">
             Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
             plant cold-pressed tacos poke beard tote bag. Heirloom echo park
             mlkshk tote bag selvage hot chicken authentic tumeric truffaut
             hexagon try-hard chambray.
           </p>
           <div className="flex justify-center">
-
-            <button className="btn-primary">
-              Button
-            </button>
-            <button className="btn-primary">
-                            Button
-            </button>
+            <button className="btn-primary">Button</button>
+            <button className="btn-primary">Button</button>
           </div>
         </div>
- 
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default About
+export default Skills;
