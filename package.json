@@ -8,14 +8,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/js": "^6.7.96",
+    "@mdi/react": "^1.6.0",
+    "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
     "convex-dev": "^0.1.2",
     "firebase": "^9.8.2",
     "framer-motion": "^6.3.11",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "next": "^12.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-sticky-box": "^1.0.2"
+    "react-sticky-box": "^1.0.2",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

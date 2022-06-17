@@ -15,7 +15,10 @@ import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 import Error from "./pages/error/Error";
 
+
+
 const App = () => {
+
   return (
     <Router>
       <Nav />
