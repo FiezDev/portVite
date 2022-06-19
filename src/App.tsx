@@ -15,15 +15,12 @@ import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 import Error from "./pages/error/Error";
 
-
-
 const App = () => {
-
   return (
     <Router>
       <Nav />
       <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/works" element={<Portfolio />} />
