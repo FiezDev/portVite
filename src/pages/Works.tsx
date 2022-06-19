@@ -1,7 +1,6 @@
 import React from "react";
-import "./portfolio.css";
 
-const Portfolio = () => {
+const Works = () => {
   return (
     <div className="text-gray-400 bg-gray-900 body-font lg:mx-[20vw] md:mx-[10vw] mx-[5vw]">
       <div className="container px-5 py-24 mx-auto">
@@ -222,4 +221,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Works;

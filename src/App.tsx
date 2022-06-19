@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { initializeApp } from "firebase/app";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {} from "firebase/database";
 import {} from "firebase/analytics";
 
-import Footer from "./components/footer/Footer";
-import Nav from "./components/nav/Nav";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
-import Skills from "./pages/skills/Skills";
-import Contact from "./pages/contact/Contact";
-import Portfolio from "./pages/portfolio/Portfolio";
-import About from "./pages/about/About";
-import Home from "./pages/home/Home";
-import Error from "./pages/error/Error";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import Works from "./pages/Works";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -23,7 +22,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/works" element={<Portfolio />} />
+        <Route path="/works" element={<Works />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>

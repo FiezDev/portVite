@@ -1,6 +1,6 @@
 import { mutation } from "convex-dev/server";
 import { Id } from "convex-dev/values";
-import { Nav } from "../src/model";
+import { Nav } from "../src/contexts/model";
 
 // Upvote a post.
 export default mutation(async ({ db }, id: Id) => {

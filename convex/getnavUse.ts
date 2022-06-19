@@ -1,5 +1,5 @@
 import { query } from "convex-dev/server";
-import { Nav } from "../src/model";
+import { Nav } from "../src/contexts/model";
 
 // List all posts in sorted order.
 export default query(async ({ db }): Promise<Nav[]> => {

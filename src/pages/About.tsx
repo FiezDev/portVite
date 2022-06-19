@@ -1,7 +1,6 @@
 import React from "react";
 import StickyBox from "react-sticky-box";
-import "./about.css";
-import guypic from "../../assets/guy.jpg"
+import guypic from "../assets/guy.jpg"
 
 const About = () => {
   return (

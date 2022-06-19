@@ -15,7 +15,6 @@
     "convex-dev": "^0.1.2",
     "firebase": "^9.8.2",
     "framer-motion": "^6.3.11",
-    "next": "^12.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",

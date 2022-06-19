@@ -9,13 +9,13 @@
 
 
   .btn3d-li {
-    @apply relative p-[15px] bg-head duration-500 
+    @apply relative p-[10px] bg-head duration-500 w-[50px] 
     hover:bg-normal hover:-translate-x-[-20px] 
-    before:absolute before:top-0 before:left-[-20px] before:w-[20px] before:h-full before:bg-head before:brightness-75 before:origin-right before:skew-y-[45deg] before:duration-500
-    after:absolute after:top-[-20px] after:left-0 after:w-full after:h-[20px] after:bg-head after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
+    before:absolute before:top-0 before:left-[-10px] before:w-[10px] before:h-full before:bg-head before:brightness-75 before:origin-right before:skew-y-[45deg] before:duration-500
+    after:absolute after:top-[-10px] after:left-0 after:w-full after:h-[10px] after:bg-head after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
     before:hover:bg-normal before:hover:brightness-75
     after:hover:bg-normal after:hover:brightness-90
-    lg:w-[200px] md:w-[100px]
+    lg:w-[200px] sm:w-[100px] sm:p-[15px]
     ;
   }
   .btn3d-a {

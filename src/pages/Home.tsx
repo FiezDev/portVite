@@ -1,5 +1,5 @@
 import React from 'react'
-import { useMutation } from "../../../convex/_generated";
+import { useMutation } from "../../convex/_generated";
 
 const Home = () => {
 
