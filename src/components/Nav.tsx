@@ -24,7 +24,7 @@ const Nav = () => {
     return windowSize() >= 640 ? (
       text
     ) : (
-      <i className={`p-0 align-middle ${url}`} />
+      <i className={`align-middle ${url}`} />
     );
   }
 
@@ -53,12 +53,11 @@ const Nav = () => {
             showSidebar ? "block" : "hidden"
           }`}
         >
-          <ul className=" ">
-            {" "}
-            {list.map((item) => {
+          <ul>
+            {list.map((item,index) => {
               return (
-                <Link key={item.id} className="btn3d-a glow" to={item.url}>
-                  <li className={`btn3d-li z-${(list.length - item.id) * 10}`}>
+                <Link key={index} className="btn3d-a glow" to={item.url}>
+                  <li className={`btn3d-li z-${(list.length - index) * 10}`}>
                     {navContentSwitch(item.display, item.picurl)}
                   </li>
                 </Link>
