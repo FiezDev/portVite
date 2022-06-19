@@ -9,16 +9,20 @@ import "../styles/global.css";
 
 const Nav = () => {
   let { windowSize } = _function();
-
+  
   const [showSidebar, setShowSidebar] = useState(false);
 
+  //by order of apperance affect z-index ***firstmenu = last in list***
   const list: { id: number; display: string; url: string; picurl: string }[] = [
-    Menu(1, "Home", "/", "fa-solid fa-house-chimney"),
-    Menu(2, "About", "/about", "fa-solid fa-address-card"),
-    Menu(3, "Skill", "/skills", "fa-solid fa-user-gear"),
-    Menu(4, "Work", "/works", "fa-solid fa-laptop-file"),
     Menu(5, "Contact", "/contact", "fa-solid fa-address-book"),
+    Menu(4, "Work", "/works", "fa-solid fa-laptop-file"),
+    Menu(3, "Skill", "/skills", "fa-solid fa-user-gear"),
+    Menu(2, "About", "/about", "fa-solid fa-address-card"),
+    Menu(1, "Home", "/", "fa-solid fa-house-chimney")
   ];
+
+  let tt = list.length;
+  console.log(tt)
 
   function navContentSwitch(text: string, url: string) {
     return windowSize() >= 640 ? (
@@ -53,18 +57,18 @@ const Nav = () => {
             showSidebar ? "block" : "hidden"
           }`}
         >
-          <ul>
+          <ul className="flex flex-col-reverse">
             {list.map((item,index) => {
               return (
                 <Link key={index} className="btn3d-a glow" to={item.url}>
-                  <li className={`btn3d-li z-${(list.length - index) * 10}`}>
+                  <li className={`btn3d-li z-${list.length - (index * 10)}`}>
                     {navContentSwitch(item.display, item.picurl)}
                   </li>
                 </Link>
               );
             })}
           </ul>
-        </nav>
+        </nav> 
       </div>
     </nav>
   );
