@@ -15,7 +15,7 @@ const Nav = () => {
   const list: { id: number; display: string; url: string; picurl: string }[] = [
     Menu(1, "Home", "/", "fa-solid fa-house-chimney"),
     Menu(2, "About", "/about", "fa-solid fa-address-card"),
-    Menu(3, "Skill", "/skills","fa-solid fa-user-gear"),
+    Menu(3, "Skill", "/skills", "fa-solid fa-user-gear"),
     Menu(4, "Work", "/works", "fa-solid fa-laptop-file"),
     Menu(5, "Contact", "/contact", "fa-solid fa-address-book"),
   ];
@@ -54,31 +54,16 @@ const Nav = () => {
           }`}
         >
           <ul className=" ">
-            <Link className="btn3d-a glow" to={list[0].url}>
-              <li id="listmenu" className="btn3d-li z-50">
-                {navContentSwitch(list[0].display, list[0].picurl)}
-              </li>
-            </Link>
-            <Link className="btn3d-a glow" to={list[1].url}>
-              <li id="listmenu" className="btn3d-li z-40">
-                {navContentSwitch(list[1].display, list[1].picurl)}
-              </li>
-            </Link>
-            <Link className="btn3d-a glow" to={list[2].url}>
-              <li id="listmenu" className="btn3d-li z-30">
-                {navContentSwitch(list[2].display, list[2].picurl)}
-              </li>
-            </Link>
-            <Link className="btn3d-a glow" to={list[3].url}>
-              <li id="listmenu" className="btn3d-li z-20">
-                {navContentSwitch(list[3].display, list[3].picurl)}
-              </li>
-            </Link>
-            <Link className="btn3d-a glow" to={list[4].url}>
-              <li id="listmenu" className="btn3d-li z-10">
-                {navContentSwitch(list[4].display, list[4].picurl)}
-              </li>
-            </Link>
+            {" "}
+            {list.map((item) => {
+              return (
+                <Link key={item.id} className="btn3d-a glow" to={item.url}>
+                  <li className={`btn3d-li z-${(list.length - item.id) * 10}`}>
+                    {navContentSwitch(item.display, item.picurl)}
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         </nav>
       </div>
