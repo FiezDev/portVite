@@ -6,10 +6,9 @@ export type Nav = {
 };
 
 export const Menu = (
-  id: number,
   display: string,
   url: string,
   picurl: string
 ) => {
-  return { id: id, display: display, url: url, picurl: picurl };
+  return {display: display, url: url, picurl: picurl };
 };
