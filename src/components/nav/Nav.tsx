@@ -53,31 +53,15 @@ const Nav = () => {
           }`}
         >
           <ul className=" ">
-            <Link key={list[0].id} className="btn3d-a glow" to={list[0].url}>
-              <li id="listmenu" className="btn3d-li z-50">
-                {navContentSwitch(list[0].display, list[0].picurl)}
-              </li>
-            </Link>
-            <Link key={list[1].id} className="btn3d-a glow" to={list[1].url}>
-              <li id="listmenu" className="btn3d-li z-40">
-                {navContentSwitch(list[1].display, list[1].picurl)}
-              </li>
-            </Link>
-            <Link key={list[2].id} className="btn3d-a glow" to={list[2].url}>
-              <li id="listmenu" className="btn3d-li z-30">
-                {navContentSwitch(list[2].display, list[2].picurl)}
-              </li>
-            </Link>
-            <Link key={list[3].id} className="btn3d-a glow" to={list[3].url}>
-              <li id="listmenu" className="btn3d-li z-20">
-                {navContentSwitch(list[3].display, list[3].picurl)}
-              </li>
-            </Link>
-            <Link key={list[4].id} className="btn3d-a glow" to={list[4].url}>
-              <li id="listmenu" className="btn3d-li z-10">
-                {navContentSwitch(list[4].display, list[4].picurl)}
-              </li>
-            </Link>
+            {list.map((item) => {
+              return (
+                <Link key={item.id} className="btn3d-a glow" to={item.url}>
+                  <li className={`btn3d-li z-${(list.length - item.id) * 10}`}>
+                    {navContentSwitch(item.display, item.picurl)}
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         </nav>
       </div>
