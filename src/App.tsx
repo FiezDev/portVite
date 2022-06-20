@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {} from "firebase/database";
-import {} from "firebase/analytics";
 
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";

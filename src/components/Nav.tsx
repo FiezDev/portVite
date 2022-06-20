@@ -20,10 +20,6 @@ const Nav = () => {
     Menu("Home", "/", "fa-solid fa-house-chimney"),
   ];
 
-  function navContentSwitch(text: string, url: string) {
-    return windowSize() >= 640 ? text : <i className={`align-middle ${url}`} />;
-  }
-
   return (
     <nav>
       {showSidebar ? (
@@ -51,10 +47,16 @@ const Nav = () => {
         >
           <ul className="flex flex-col-reverse">
             {list.map((item, index) => {
-              return (
-                <Link key={index} className="btn3d-a glow" to={item.url}>
-                  <li className="btn3d-li">
-                    {navContentSwitch(item.display, item.picurl)}
+              return ( 
+                <Link key={index} className="hover:text-white text-center text-white block uppercase tracking-wider	duration-500 glow" to={item.url}>
+                  <li className="relative p-[10px] bg-head duration-500 w-[50px] 
+    hover:bg-normal hover:-translate-x-[-20px] 
+    before:absolute before:top-0 before:left-[-10px] before:w-[10px] before:h-full before:bg-head before:brightness-75 before:origin-right before:skew-y-[45deg] before:duration-500
+    after:absolute after:top-[-10px] after:left-0 after:w-full after:h-[10px] after:bg-head after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
+    before:hover:bg-normal before:hover:brightness-75
+    after:hover:bg-normal after:hover:brightness-90
+    lg:w-[200px] sm:w-[100px] sm:p-[15px]">                
+                    {windowSize() >= 640 ? item.display : <i className={`align-middle ${item.picurl}`} />}
                   </li>
                 </Link>
               );
