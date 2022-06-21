@@ -24,7 +24,7 @@ const Nav = () => {
     <nav>
       {showSidebar ? (
         <img
-          className="flex w-[25px] sm:w-[35px] lg:w-[50px] z-[70] items-center fixed left-4 top-4 sm:left-7 sm:top-7"
+          className="flex w-[25px] sm:w-[35px] lg:w-[50px] z-[70] items-center fixed left-4 top-4 sm:left-7 sm:top-7 duration-500"
           onClick={() => setShowSidebar(!showSidebar)}
           src={close}
           width="50px"
@@ -33,13 +33,13 @@ const Nav = () => {
       ) : (
         <img
           onClick={() => setShowSidebar(!showSidebar)}
-          className="fixed z-40 flex items-center cursor-pointer left-5 top-5"
+          className="flex w-[25px] sm:w-[35px] lg:w-[50px] z-[70] items-center fixed left-4 top-4 sm:left-7 sm:top-7 duration-500"
           src={ham}
           width="40px"
           alt=""
         />
       )}
-      <div className="top-0 left-0 text-white fixed h-full z-30">
+      <div className="top-0 left-0 text-white fixed h-full z-30 " >
         <nav
           className={`z-20 fixed top-2/4 -translate-y-[calc(50%+3vh)] ${
             showSidebar ? "block" : "hidden"

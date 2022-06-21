@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -13,18 +17,28 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 
 const App = () => {
+
+  const NavLayout = () => (
+    <>
+     <Nav />
+      <Outlet />
+    </>
+  );
+
   return (
     <Router>
-      <Nav />
+     
       <Routes>
+        <Route element={<NavLayout />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Route>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/works" element={<Works />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 };

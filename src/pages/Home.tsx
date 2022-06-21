@@ -6,8 +6,8 @@ const Home = () => {
   let { setProject,getProject,getAllProject } = _firebase();
   // const setData = setProject(project);
   // console.log(setData);
-  const getData = getAllProject();
-  console.log(getData);
+  // const getData = getAllProject();
+  // console.log(getData);
 
 
   return <div>Home</div>;
