@@ -26,8 +26,7 @@ const App = () => {
   );
 
   return (
-    <Router>
-     
+    <Router> 
       <Routes>
         <Route element={<NavLayout />}>
           <Route path="/about" element={<About />} />

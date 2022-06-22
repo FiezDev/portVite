@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { useQuery, useMutation } from "../../convex/_generated";
 import { Link } from "react-router-dom";
-import _function from "../adapters/function";
+import useFunction from "../adapters/function";
 import { Menu } from "../contexts/model";
 import ham from "../assets/ham.svg";
 import close from "../assets/close.svg";
 import "../styles/global.css";
 
 const Nav = () => {
-  let { windowSize } = _function();
+  let { windowSize } = useFunction();
   const [showSidebar, setShowSidebar] = useState(false);
 
   //by order of apperance affect z-index ***firstmenu = last in list***
@@ -21,50 +21,54 @@ const Nav = () => {
   ];
 
   return (
-    <nav>
+    <>
       {showSidebar ? (
         <img
-          className="flex w-[25px] sm:w-[35px] lg:w-[50px] z-[70] items-center fixed left-4 top-4 sm:left-7 sm:top-7 duration-500"
+          className="flex w-[25px] sm:w-[35px] lg:w-[40px] z-[70] items-center fixed left-3 top-4 sm:left-8 sm:top-7 duration-500"
           onClick={() => setShowSidebar(!showSidebar)}
           src={close}
-          width="50px"
           alt=""
         />
       ) : (
         <img
           onClick={() => setShowSidebar(!showSidebar)}
-          className="flex w-[25px] sm:w-[35px] lg:w-[50px] z-[70] items-center fixed left-4 top-4 sm:left-7 sm:top-7 duration-500"
+          className="flex w-[25px] sm:w-[35px] lg:w-[40px] z-[70] items-center fixed left-3 top-4 sm:left-8 sm:top-7 duration-500"
           src={ham}
-          width="40px"
           alt=""
         />
       )}
-      <div className="top-0 left-0 text-white fixed h-full z-30 " >
-        <nav
-          className={`z-20 fixed top-2/4 -translate-y-[calc(50%+3vh)] ${
-            showSidebar ? "block" : "hidden"
-          }`}
-        >
+      <nav className="glass top-0 text-white fixed h-screen z-30 lg:w-[200px] sm:w-[100px] -left-[50px] lg:-left-[200px] sm:-left-[100px] ">
+        <div
+          className={`glass z-20 fixed pt-40  h-screen ease-in-out duration-300
+        ${!showSidebar ? "translate-x-0 " : "translate-x-full"}`}>
+
           <ul className="flex flex-col-reverse">
-            {list.map((item, index) => {
-              return ( 
-                <Link key={index} className="hover:text-white text-center text-white block uppercase tracking-wider	duration-500 glow" to={item.url}>
-                  <li className="relative p-[10px] bg-head duration-500 w-[50px] 
-    hover:bg-normal hover:-translate-x-[-20px] 
-    before:absolute before:top-0 before:left-[-10px] before:w-[10px] before:h-full before:bg-head before:brightness-75 before:origin-right before:skew-y-[45deg] before:duration-500
-    after:absolute after:top-[-10px] after:left-0 after:w-full after:h-[10px] after:bg-head after:brightness-90 after:origin-bottom after:skew-x-[45deg] after:duration-500
-    before:hover:bg-normal before:hover:brightness-75
-    after:hover:bg-normal after:hover:brightness-90
-    lg:w-[200px] sm:w-[100px] sm:p-[15px]">                
-                    {windowSize() >= 640 ? item.display : <i className={`align-middle ${item.picurl}`} />}
+            {list.map(({ display, url, picurl }, index) => {
+              return (
+                <Link
+                  key={index}
+                  className="hover:text-white text-center text-white block uppercase tracking-wider glow"
+                  to={url}
+                >
+                  <li className="relative p-[10px] duration-500 
+                  hover:bg-normal   hover:scale-x-110 hover:duration-500 
+                  w-[50px] lg:w-[200px] sm:w-[100px] sm:p-[15px] hover:lg:translate-x-[20px] hover:md:translate-x-[15px] hover:translate-x-[5px]
+                  before:absolute before:top-0 before:left-[-10px] before:w-[10px] before:h-full before:bg-head before:brightness-75 before:origin-right
+                  before:hover:bg-normal before:hover:brightness-75
+                   ">
+                    {windowSize() >= 640 ? (
+                      <span className="hover:scale-x-100">{display}</span>
+                    ) : (
+                      <i className={`hover:scale-x-100 align-middle ${picurl}`} />
+                    )}
                   </li>
                 </Link>
               );
             })}
           </ul>
-        </nav>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 };
 

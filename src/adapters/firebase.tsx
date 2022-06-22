@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { useState } from "react";
-import config from "../config.json";
+import  config from "../config.json";
 import {
   doc,
   setDoc,
@@ -11,7 +11,7 @@ import {
   collection,
   query,
   where,
-  getDocs,
+  getDocs
 } from "firebase/firestore";
 
 const firebaseConfig = config.Firebase;
@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const DBref = getFirestore(app);
 
-const _firebase = () => {
+const useFirebase = () => {
   const [projectQuantity, setprojectQuantity] = useState(0);
 
   async function setProject(data: object, name: string) {
@@ -49,7 +49,6 @@ const _firebase = () => {
     const querySnapshot = await getDocs(_query);
     querySnapshot.forEach((doc) => {
       quan++;
-      // doc.data() is never undefined for query doc snapshots
       console.log(doc.data(), " => ", doc.data());
     });
     console.log(quan);
@@ -57,5 +56,5 @@ const _firebase = () => {
   }
   return { setProject, getProject, getAllProject };
 };
-export { _firebase, analytics };
+export { useFirebase, analytics };
 export default firebase;
