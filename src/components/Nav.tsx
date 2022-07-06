@@ -1,24 +1,26 @@
 import React, { useContext, useState } from "react";
 import { useQuery, useMutation } from "../../convex/_generated";
 import { Link } from "react-router-dom";
-import useFunction from "../adapters/function";
-import { Menu } from "../contexts/model";
+import _function from "../adapters/function";
+// import { Menu } from "../contexts/model";
+import  menu from "../contexts/menu.json";
 import ham from "../assets/ham.svg";
 import close from "../assets/close.svg";
 import "../styles/global.css";
 
 const Nav = () => {
-  let { windowSize } = useFunction();
+  let { windowSize } = _function();
   const [showSidebar, setShowSidebar] = useState(false);
 
   //by order of apperance affect z-index ***firstmenu = last in list***
-  const list: { display: string; url: string; picurl: string }[] = [
-    Menu("Contact", "/contact", "fa-solid fa-address-book"),
-    Menu("Work", "/works", "fa-solid fa-laptop-file"),
-    Menu("Skill", "/skills", "fa-solid fa-user-gear"),
-    Menu("About", "/about", "fa-solid fa-address-card"),
-    Menu("Home", "/", "fa-solid fa-house-chimney"),
-  ];
+  // const list: { display: string; url: string; picurl: string }[] = [
+  //   Menu("Contact", "/contact", "fa-solid fa-address-book"),
+  //   Menu("Work", "/works", "fa-solid fa-laptop-file"),
+  //   Menu("Skill", "/skills", "fa-solid fa-user-gear"),
+  //   Menu("About", "/about", "fa-solid fa-address-card"),
+  //   Menu("Home", "/", "fa-solid fa-house-chimney"),
+  // ];
+    const list = menu;
 
   return (
     <>
@@ -56,7 +58,7 @@ const Nav = () => {
                   before:absolute before:top-0 before:left-[-10px] before:w-[10px] before:h-full before:bg-head before:brightness-75 before:origin-right
                   before:hover:bg-normal before:hover:brightness-75
                    ">
-                    {windowSize() >= 640 ? (
+                    {windowSize() >= 640? (
                       <span className="hover:scale-x-100">{display}</span>
                     ) : (
                       <i className={`hover:scale-x-100 align-middle ${picurl}`} />

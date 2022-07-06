@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 
-const useFunction = () => {
+const _function = () => {
   const [width, setSize] = useState(0);
 
   function windowSize() {
@@ -28,4 +28,4 @@ const useFunction = () => {
   return { windowSize, randomName };
 };
 
-export default useFunction;
+export default _function;
